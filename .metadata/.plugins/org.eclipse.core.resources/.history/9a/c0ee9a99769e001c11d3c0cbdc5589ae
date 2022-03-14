@@ -1,0 +1,7 @@
+package com.userAndProduct.Apirest.model;
+
+import javax.persistence.Entity;
+
+public class TarefaModel {
+
+}

@@ -1,0 +1,10 @@
+package com.userAndProduct.Apirest.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TB_LISTA_DE_TAREFAS")
+public class TarefaModel {
+
+}

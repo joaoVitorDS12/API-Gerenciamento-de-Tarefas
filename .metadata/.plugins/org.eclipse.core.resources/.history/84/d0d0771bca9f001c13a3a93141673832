@@ -1,0 +1,5 @@
+package com.userAndProduct.Apirest.repository;
+
+public interface UserRepository {
+
+}

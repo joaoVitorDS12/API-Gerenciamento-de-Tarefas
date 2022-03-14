@@ -1,0 +1,13 @@
+package com.userAndProduct.Apirest.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TB_TAREFAS")
+public class TarefaModel {
+	
+	@Id
+	public Integer id;
+}

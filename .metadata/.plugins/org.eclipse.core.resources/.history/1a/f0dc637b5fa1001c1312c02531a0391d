@@ -1,0 +1,48 @@
+package com.userAndProduct.Apirest.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "TB_DEPARTAMENT")
+public class Departament {
+	
+	@Id
+	@GeneratedValue
+	private Integer idDepartamento;
+	
+	@Column(nullable = false, length = 50)
+	private String titulo;
+	
+	@ManyToOne
+	private User usuario;
+
+	public User getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(User usuario) {
+		this.usuario = usuario;
+	}
+
+	public Integer getId() {
+		return idDepartamento;
+	}
+
+	public void setId(Integer id) {
+		this.idDepartamento = id;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+	
+}

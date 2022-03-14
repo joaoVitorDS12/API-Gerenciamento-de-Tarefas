@@ -1,0 +1,8 @@
+package com.userAndProduct.Apirest.model;
+
+public class ListaPessoas {
+	
+	public String name;
+	public String tituloDepartamento;
+	public double horasGastasTarefas;
+}

@@ -1,0 +1,50 @@
+package com.userAndProduct.Apirest.model;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name="TB_USER")
+public class User {
+	
+	@Id
+	@GeneratedValue()
+	long idUser;
+	
+	@Column(nullable = false, length = 50)
+	String name;
+	
+	@OneToMany
+	@JoinColumn
+	private List<Departament> departamento;
+
+	public Long getIdUser() {
+		return idUser;
+	}
+
+	public void setIdUser(Integer idUser) {
+		this.idUser = idUser;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+
+	
+	
+}

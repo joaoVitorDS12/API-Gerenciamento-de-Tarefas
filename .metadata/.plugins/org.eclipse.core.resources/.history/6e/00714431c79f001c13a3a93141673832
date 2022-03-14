@@ -1,0 +1,25 @@
+package com.userAndProduct.Apirest.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TB_USER")
+public class UserModel {
+	
+	@Id
+	@GeneratedValue
+	private Integer idUser;
+	
+	@Column(nullable = false, length = 50)
+	private String name;
+	
+	
+
+
+	
+	
+}

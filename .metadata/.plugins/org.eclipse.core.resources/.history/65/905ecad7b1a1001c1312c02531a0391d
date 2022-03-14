@@ -1,0 +1,5 @@
+package com.userAndProduct.Apirest.model;
+
+public class UserRequest {
+
+}

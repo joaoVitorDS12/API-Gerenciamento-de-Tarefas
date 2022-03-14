@@ -1,0 +1,38 @@
+package com.userAndProduct.Apirest.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.userAndProduct.Apirest.model.Task;
+import com.userAndProduct.Apirest.repository.TaskRepository;
+
+@RestController
+public class TaskController {
+	
+	@Autowired
+	private TaskRepository repository;
+	
+	@GetMapping("/tarefas")
+	public List<Task> consultarTodasTarefas(){
+		return repository.findAll();
+	}
+	
+	@GetMapping(path = "/tarefas/{idTarefas}")
+	public ResponseEntity<Task> consultar(@PathVariable("idTarefas") Long idTarefas){
+		return repository.findById(idTarefas)
+				.map(record -> ResponseEntity.ok().body(record))
+				.orElse(ResponseEntity.notFound().build());
+	}
+	
+	@PostMapping("/tarefas/adicionar")
+	public Task adicionar(@RequestBody Task tarefas) {
+		return repository.save(tarefas);
+	}
+}

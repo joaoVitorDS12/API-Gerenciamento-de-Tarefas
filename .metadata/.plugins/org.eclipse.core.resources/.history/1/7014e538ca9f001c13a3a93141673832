@@ -1,0 +1,9 @@
+package com.userAndProduct.Apirest.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class UserController {
+	
+	private UserRepository repository;
+}

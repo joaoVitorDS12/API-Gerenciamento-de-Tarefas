@@ -1,0 +1,27 @@
+package com.userAndProduct.Apirest.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.userAndProduct.Apirest.model.ListaPessoas;
+import com.userAndProduct.Apirest.model.Task;
+
+public interface TaskRepository extends JpaRepository<Task, Long>{
+	
+	/*
+	@Query(value = "SELECT usu.name\r\n"
+			+ "	,dept.titulo\r\n"
+			+ "	,sum(task.duracao)\r\n"
+			+ "FROM TB_TAREFAS task\r\n"
+			+ "LEFT JOIN tb_user usu ON usu.id_user = task.id_user\r\n"
+			+ "LEFT JOIN tb_departament dept ON dept.id_departamento = task.id_departamento\r\n"
+			+ "WHERE task.id_user > 0\r\n"
+			+ "GROUP BY usu.name\r\n"
+			+ "	,dept.titulo")
+	*/
+	@Query(value = "SELECT new com.userAndProduct.Apirest.model.ListaPessoas(f.titulo, f.titulo,sum(f.duracao)) FROM Task f group by f.titulo")
+	public List<ListaPessoas> getListaPessoas();
+
+}

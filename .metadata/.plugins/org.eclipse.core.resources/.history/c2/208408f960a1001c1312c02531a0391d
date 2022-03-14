@@ -1,0 +1,9 @@
+ package com.userAndProduct.Apirest.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.userAndProduct.Apirest.model.User;
+
+public interface UserRepository extends CrudRepository<User, Integer> {
+
+}

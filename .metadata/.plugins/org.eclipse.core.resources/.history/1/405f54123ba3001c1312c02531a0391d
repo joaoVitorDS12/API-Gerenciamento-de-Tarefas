@@ -1,0 +1,52 @@
+package com.userAndProduct.Apirest.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+public class ListaPessoas {
+	
+	public String name;
+	public String tituloDepartamento;
+	public long horasGastasTarefas;
+	public String prazoTarefa;
+	
+	public ListaPessoas(String name, String tituloDepartamento, long horasGastasTarefas, String prazoTarefa) {
+		super();
+		this.name = name;
+		this.tituloDepartamento = tituloDepartamento;
+		this.horasGastasTarefas = horasGastasTarefas;
+		this.prazoTarefa = prazoTarefa;
+	}
+	public String getPrazoTarefa() {
+		return prazoTarefa;
+	}
+	public void setPrazoTarefa(String prazoTarefa) {
+		this.prazoTarefa = prazoTarefa;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getTituloDepartamento() {
+		return tituloDepartamento;
+	}
+	public void setTituloDepartamento(String tituloDepartamento) {
+		this.tituloDepartamento = tituloDepartamento;
+	}
+	public double getHorasGastasTarefas() {
+		return horasGastasTarefas;
+	}
+	public void setHorasGastasTarefas(long horasGastasTarefas) {
+		this.horasGastasTarefas = horasGastasTarefas;
+	}
+
+	
+}

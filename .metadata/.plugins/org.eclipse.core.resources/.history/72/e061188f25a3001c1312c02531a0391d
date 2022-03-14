@@ -1,0 +1,26 @@
+package com.userAndProduct.Apirest.model;
+
+public interface ListaPessoas {
+	
+	public String name;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getTituloDepartamento() {
+		return tituloDepartamento;
+	}
+	public void setTituloDepartamento(String tituloDepartamento) {
+		this.tituloDepartamento = tituloDepartamento;
+	}
+	public double getHorasGastasTarefas() {
+		return horasGastasTarefas;
+	}
+	public void setHorasGastasTarefas(double horasGastasTarefas) {
+		this.horasGastasTarefas = horasGastasTarefas;
+	}
+	public String tituloDepartamento;
+	public double horasGastasTarefas;
+}

@@ -1,0 +1,15 @@
+package com.userAndProduct.Apirest.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class DepartamentModel {
+	
+	@Id
+	private Integer id;
+	
+	@Column(nullable = false, length = 50)
+	private String titulo;
+}
