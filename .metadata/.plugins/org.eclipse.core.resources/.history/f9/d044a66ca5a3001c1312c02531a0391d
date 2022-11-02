@@ -1,9 +1,0 @@
-package com.userAndProduct.Apirest.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.userAndProduct.Apirest.model.Departament;
-
-public interface DepartamentRepository extends JpaRepository<Departament, Long> {
-
-}

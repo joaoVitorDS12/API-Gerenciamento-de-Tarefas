@@ -1,9 +1,0 @@
- package com.userAndProduct.Apirest.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.userAndProduct.Apirest.model.Pessoas;
-
-public interface UserRepository extends JpaRepository<Pessoas, Long> {
-
-}
